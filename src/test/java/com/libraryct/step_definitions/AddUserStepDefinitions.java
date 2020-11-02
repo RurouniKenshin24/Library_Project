@@ -5,12 +5,10 @@ import com.libraryct.pages.UserManagementPage;
 
 import com.libraryct.pages.UsersPage;
 import com.libraryct.utils.BrowserUtils;
-import com.libraryct.utils.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 
 public class AddUserStepDefinitions {
