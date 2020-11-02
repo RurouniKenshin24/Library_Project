@@ -17,10 +17,13 @@ public class UsersPage extends BasePage{
     @FindBy(xpath = "//select[@name='tbl_users_length']")
     private WebElement recordsDropDown;
 
-    @FindBy(xpath = "//input[@type='search']")
-    private WebElement searchInputBox;
-
     @FindBy(id = "tbl_users")
     private WebElement usersTable;
 
+    @FindBy(xpath = "//input[@type='search']")
+    private WebElement searchInputBox;
+
+    public void writeInSearchBox(String searchFor){
+        searchInputBox.sendKeys(searchFor);
+    }
 }

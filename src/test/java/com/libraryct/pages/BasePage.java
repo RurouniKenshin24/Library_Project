@@ -1,6 +1,7 @@
 package com.libraryct.pages;
 
 import com.libraryct.utils.BrowserUtils;
+import com.libraryct.utils.ConfigurationReader;
 import com.libraryct.utils.Driver;
 import io.cucumber.java.eo.Se;
 import org.openqa.selenium.By;
@@ -65,5 +66,15 @@ public abstract class BasePage {
 
         int recordNumbers = recordList.size()-1;
         return recordNumbers;
+    }
+
+    public void navigateToModule(String module){
+        String moduleXPath = "//span[.='"+module+"']";
+        WebElement moduleElement = Driver.getDriver().findElement(By.xpath(moduleXPath));
+        moduleElement.click();
+    }
+
+    public void navigateToLoginScreen(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("URL"));
     }
 }

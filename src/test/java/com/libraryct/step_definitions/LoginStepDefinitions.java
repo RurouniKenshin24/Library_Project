@@ -1,6 +1,5 @@
 package com.libraryct.step_definitions;
 
-import com.libraryct.pages.BasePage;
 import com.libraryct.pages.LoginPage;
 import com.libraryct.utils.BrowserUtils;
 import com.libraryct.utils.ConfigurationReader;
@@ -32,7 +31,7 @@ public class LoginStepDefinitions {
     public void user_should_be_able_to_see_dashboard_page() {
         String actualTitle = Driver.getDriver().getTitle();
         System.out.println(actualTitle);
-        String expectedTitle = "Login - Library";
+        String expectedTitle = "Library";
 
         Assert.assertEquals(expectedTitle,actualTitle);
         Driver.closeDriver();
