@@ -1,4 +1,6 @@
 Feature: As a user I should be able to filter records by the required number of records from the Show records dropdown
+
+  @display_records
   Scenario: Search by User ID
     Given user is on the User Management page
     When enters clicks "15" records
