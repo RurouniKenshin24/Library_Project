@@ -194,6 +194,10 @@ public class UserManagementPage extends BasePage {
         return true;
     }
 
+    public WebElement getUserManagementHeading(){
+        return userManagementHeading;
+    }
+
     public List<String> getStringOfStudents(){
         List<String> studentStrings = new ArrayList<>();
         for(WebElement each : students){
@@ -224,8 +228,7 @@ public class UserManagementPage extends BasePage {
     }
 
     public String getFullNameCellText(){
-        String fullNameCellText = fullNameCell1.getText();
-        return fullNameCellText;
+        return fullNameCell1.getText();
     }
 
 
