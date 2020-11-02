@@ -1,6 +1,7 @@
 package com.libraryct.pages;
 
 import com.libraryct.utils.BrowserUtils;
+import com.libraryct.utils.ConfigurationReader;
 import com.libraryct.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -34,6 +35,16 @@ public abstract class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(tabElement)).click();
 
         BrowserUtils.wait(3);
+    }
+
+    public void navigateToModule(String module){
+        String moduleXPath = "//span[.='"+module+"']";
+        WebElement moduleElement = Driver.getDriver().findElement(By.xpath(moduleXPath));
+        moduleElement.click();
+    }
+
+    public void navigateToLoginScreen(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("URL"));
     }
 
 }
