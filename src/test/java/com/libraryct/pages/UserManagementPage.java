@@ -115,6 +115,10 @@ public class UserManagementPage extends BasePage {
         return error;
     }
 
+    public WebElement getShowRecordsDropDown() {
+        return showRecordsDropDown;
+    }
+
     public WebElement getStatusDropDown(){
         return userStatus;
     }
