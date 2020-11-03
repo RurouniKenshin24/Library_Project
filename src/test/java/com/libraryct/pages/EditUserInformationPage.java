@@ -19,4 +19,5 @@ public class EditUserInformationPage extends BasePage {
 
     @FindBy(css ="button[type='submit']" )
     public WebElement submitButton;
+
 }
