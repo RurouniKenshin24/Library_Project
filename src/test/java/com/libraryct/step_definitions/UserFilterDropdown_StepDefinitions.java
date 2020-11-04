@@ -11,10 +11,8 @@ public class UserFilterDropdown_StepDefinitions {
 
     @When("librarian selects the {string} from User Groups dropdown menu")
     public void librarian_selects_the_from_user_groups_dropdown_menu(String string) {
-        string = "Librarian";
         Select select = new Select(userManagementPage.getUserDropDown());
         select.selectByVisibleText(string);
-        System.out.println("SELECTED USER IS = " + select.getFirstSelectedOption().getText());
     }
 
 
